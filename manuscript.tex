@@ -1,0 +1,553 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Ap}{\operatorname{Ap}}
+\newcommand{\Max}{\operatorname{Max}}
+\newcommand{\PC}{\operatorname{PC}}
+\newcommand{\ind}[1]{\mathbf{1}_{\{#1\}}}
+\newcommand{\pos}[1]{(#1)_{+}}
+
+\title{A path certificate for Wilf's conjecture\\and verification up to multiplicity 23}
+\author{Jason Collier}
+\date{5 October 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We give a lower bound for the Wilf number of a numerical semigroup in
+terms of a finite downset of Ap\'ery normal forms and the residues of its
+minimal generators. The bound is a weighted longest-path certificate
+and is uniform in the generator heights. A discrete summation identity
+and a carry estimate yield the shape criterion $W(S)\ge R_0(B)-D(B)$.
+Two independent exhaustive enumerations, each rerun in full,
+verify this criterion on every required cyclic tile of multiplicities
+$20$ through $23$, with one exception at multiplicity $21$. That exception
+is certified directly at all maximal targets in its unit orbit.
+Combining these calculations with established cases proves Wilf's
+conjecture for all numerical semigroups of multiplicity at most $23$,
+without a bound on genus or conductor.
+\end{abstract}
+
+\section{Introduction}
+
+A numerical semigroup is a submonoid $S\subseteq\N=\{0,1,2,\ldots\}$
+with finite complement. For $S\ne\N$, write $m$ for its multiplicity,
+$e$ for the cardinality of its minimal generating set, and $c$ for its
+conductor. Put $n=|S\cap[0,c)|$. Wilf's conjecture asks whether
+\begin{equation}\label{eq:wilf}
+ W(S):=en-c\ge0
+\end{equation}
+always holds \cite{Wilf}.
+
+Bruns, Garc\'ia-S\'anchez, O'Neill and Wilburne established the
+conjecture for $m\le18$ using a polyhedral algorithm \cite{BGOW}.
+Kliem and Stump extended this to $m=19$ \cite{KS}. The cases $e\le3$
+are classical \cite{FGH,DM}; Eliahou proved the conjecture whenever
+$3e\ge m$ \cite{EliahouGraph}. Genus-based computation has verified it
+through genus $100$ \cite{DEF}. The August 2026 account \cite{Marashdeh}
+still lists $m\le19$ as the fixed-multiplicity bound.
+
+Here we use finite downsets of exponent vectors representing the
+Ap\'ery set. Downsets, also viewed as sets of monomials closed under
+division, already play a role in the literature; see, for example,
+\cite{EliahouDivsets}. Our purpose is to give a self-contained path
+certificate on such a downset and apply it to a finite census. The
+construction is uniform in the integer heights of the generators, so a
+finite calculation addresses infinitely many semigroups.
+
+\begin{theorem}[Computer-assisted]\label{thm:main}
+Every numerical semigroup of multiplicity $m\le23$ satisfies Wilf's
+conjecture.
+\end{theorem}
+
+For $20\le m\le23$, the only cases not supplied by $e\le3$ and
+$3e\ge m$ are
+\[
+\begin{array}{c|c}
+m&\text{embedding dimensions requiring computation}\\ \hline
+20,21&4,5,6\\
+22,23&4,5,6,7.
+\end{array}
+\]
+These are the fourteen rows of Table~\ref{tab:census}. No assertion for
+unrestricted multiplicity follows from this finite computation.
+
+\section{Ap\'ery normal forms and a summation identity}
+
+Let
+\[
+S=\langle m,g_1,\ldots,g_d\rangle,\qquad e=d+1,
+\]
+be a minimal generating set. Each $g_j>m$ has the form
+$g_j=a_j+mh_j$, with $1\le a_j<m$ and integer $h_j\ge1$.
+The $a_j$ are distinct: two generators in the same residue class would
+make the larger one decomposable. Also $\gcd(m,a_1,\ldots,a_d)=1$.
+
+The Ap\'ery set
+\[
+\Ap(S,m)=\{s\in S:s-m\notin S\}
+\]
+contains one element in each residue class modulo $m$. For each of its
+elements, select the lexicographically least factorization over
+$g_1,\ldots,g_d$. Let $B\subseteq\N^d$ be the set of selected exponent
+vectors, and put $w(b)=\sum_jg_jb_j$.
+
+\begin{lemma}\label{lem:normal}
+The set $B$ is a downset of cardinality $m$, contains the origin and all
+unit vectors, and the map
+$\phi(b)=\sum_ja_jb_j\pmod m$ is bijective on $B$.
+\end{lemma}
+\begin{proof}
+If $b\in B$ and $v\le b$ coordinatewise, then $w(v)\in\Ap(S,m)$:
+otherwise $w(b)-m=(w(v)-m)+w(b-v)$ would belong to $S$.
+If a factorization of $w(v)$ were lexicographically smaller than $v$,
+adding $b-v$ would give a smaller factorization of $w(b)$.
+Thus $v\in B$. Each $g_j$ lies in $\Ap(S,m)$, since otherwise
+$g_j=m+(g_j-m)$ would be decomposable, and by minimality $\mathbf e_j$
+is its only factorization over $g_1,\ldots,g_d$. Hence $B$ contains the
+unit vectors, and the origin, the factorization of $0$. Distinct
+elements of $\Ap(S,m)$ have distinct selected factorizations, so
+$|B|=m$. Finally $w(b)\equiv\phi(b)\pmod m$, and $w$ maps $B$ onto
+$\Ap(S,m)$, which meets every residue class modulo $m$ exactly once.
+Therefore $\phi$ is bijective on $B$.
+\end{proof}
+
+\begin{definition}
+A \emph{nondegenerate cyclic tile} of size $m$ in $\N^d$ is a downset
+$B$ of cardinality $m$ containing the origin and all unit vectors,
+together with labels $a\in\{1,\ldots,m-1\}^d$ such that
+$\phi(b)=a\cdot b\pmod m$ is bijective on $B$.
+\end{definition}
+
+The census includes every such tile, whether or not it arises from a
+numerical semigroup. This larger class suffices by Lemma~\ref{lem:normal}.
+Write $|b|=\sum_jb_j$ and define the endpoint weight
+\begin{equation}\label{eq:mu}
+\mu(b)=\sum_{j:b+\mathbf e_j\notin B}(b_j+1).
+\end{equation}
+In particular, $\mu(b)\ge0$.
+
+\begin{lemma}[Discrete summation]\label{lem:summation}
+For every function $f:B\to\mathbb R$,
+\begin{equation}\label{eq:summation}
+\sum_{b\in B}\mu(b)f(b)
+=d\sum_{b\in B}f(b)
++\sum_{b\in B}\sum_{j:b_j>0}b_j\bigl(f(b)-f(b-\mathbf e_j)\bigr).
+\end{equation}
+Consequently
+\begin{equation}\label{eq:moments}
+\sum_b\mu(b)=dm,\qquad
+\sum_b\mu(b)b_j=(d+1)\sum_bb_j\quad(1\le j\le d).
+\end{equation}
+\end{lemma}
+\begin{proof}
+Expand the left side of \eqref{eq:summation} as
+\[
+\sum_b(|b|+d)f(b)
+-\sum_{\substack{b,j\\b+\mathbf e_j\in B}}(b_j+1)f(b).
+\]
+In the second sum, substitute $v=b+\mathbf e_j$. The downset property
+identifies the indexing set with all $(v,j)$ satisfying $v_j>0$.
+This gives \eqref{eq:summation}. Apply it to $f=1$ and $f(b)=b_j$.
+\end{proof}
+
+\section{The path certificate}
+
+For a cyclic tile, put $A(b)=a\cdot b$. At a target
+$t\in\{0,\ldots,m-1\}$, set
+\begin{align}
+l_t&=m-1-t,& N_t(b)&=\left\lfloor\frac{A(b)+l_t}{m}\right\rfloor,
+\label{eq:carry}\\
+\Psi_t(b)&=|b|+N_t(b),&
+E_t(b)&=\max_{z\in B,\,z\ge b}\bigl(\Psi_t(z)-\Psi_t(b)\bigr).
+\label{eq:path}
+\end{align}
+The maximum in \eqref{eq:path} is attained at a coordinatewise maximal
+cell: $\Psi_t$ increases strictly at each upward unit step. Define
+\begin{align}
+p_t&=l_t+\sum_b\mu(b)N_t(b)-(d+1)\sum_bN_t(b),\label{eq:p}\\
+R_t&=\sum_b\mu(b)E_t(b),& \PC_t&=p_t+R_t.\label{eq:pc}
+\end{align}
+All these quantities are integers computed from the finite labelled tile.
+
+For a genuine semigroup, let $\beta=\max\Ap(S,m)=c+m-1$ and let $y\in B$
+be its selected factorization. The cell $y$ is maximal, since the
+generators are positive. Write $r=\beta\pmod m$, $q=\lfloor\beta/m\rfloor$,
+and
+\[
+\ell_b=\left\lfloor\frac{\beta-w(b)}m\right\rfloor\ge0.
+\]
+
+\begin{proposition}[Exact endpoint identity]\label{prop:identity}
+With the notation above,
+\begin{equation}\label{eq:identity}
+W(S)=p_r+\sum_b\mu(b)\ell_b.
+\end{equation}
+\end{proposition}
+\begin{proof}
+There are exactly $\ell_b$ members of
+$w(b)+m\N$ below $c=\beta-m+1$. Thus $n=\sum_b\ell_b$.
+Since $c=mq-l_r$ and $w(b)=A(b)+m h\cdot b$,
+\[
+\ell_b=q-h\cdot b-N_r(b).
+\]
+It follows that
+\[
+W=dmq-(d+1)\sum_b h\cdot b-(d+1)\sum_bN_r(b)+l_r.
+\]
+The two identities in \eqref{eq:moments} give
+\[
+\sum_b\mu(b)\ell_b
+=dmq-(d+1)\sum_b h\cdot b-\sum_b\mu(b)N_r(b).
+\]
+Subtract and use \eqref{eq:p}.
+\end{proof}
+
+\begin{theorem}[Path bound]\label{thm:path}
+For every numerical semigroup with the normal-form tile above,
+\begin{equation}\label{eq:pathbound}
+\ell_b\ge E_r(b)\quad(b\in B),\qquad W(S)\ge\PC_r.
+\end{equation}
+\end{theorem}
+\begin{proof}
+Let $z\in B$ with $z\ge b$. The formula for $\ell$ in the proof of
+Proposition~\ref{prop:identity} and $h_j\ge1$ give
+\[
+\ell_b-\ell_z
+=h\cdot(z-b)+N_r(z)-N_r(b)
+\ge |z|-|b|+N_r(z)-N_r(b).
+\]
+As $\ell_z\ge0$, maximizing over $z$ proves the first inequality.
+Multiply it by the nonnegative weights $\mu(b)$ and apply
+Proposition~\ref{prop:identity}.
+\end{proof}
+
+The path bound uses only $h_j\ge1$ and $\ell_z\ge0$; it requires no
+upper bound on the heights.
+
+\section{A criterion depending only on the shape}
+
+Define
+\begin{equation}\label{eq:shape}
+\eta(b)=\max_{z\in B,\,z\ge b}(|z|-|b|),\quad
+R_0(B)=\sum_b\mu(b)\eta(b),\quad
+D(B)=\sum_b\pos{|b|-2}.
+\end{equation}
+Here $x_+=\max(x,0)$; the subscript in $R_0$ indicates a shape quantity,
+not the target $t=0$ in $R_t$.
+
+\begin{lemma}[Carry estimate]\label{lem:carry}
+For every cyclic tile and every target $t$, one has $p_t\ge-D(B)$.
+\end{lemma}
+\begin{proof}
+Put $\rho_t(b)=(A(b)+l_t)\pmod m$ and
+$s_t(b)=\sum_{j:a_j>\rho_t(b)}b_j$.
+If $b_j>0$, subtracting $a_j$ shows that
+\[
+N_t(b)-N_t(b-\mathbf e_j)=\ind{a_j>\rho_t(b)}.
+\]
+By \eqref{eq:summation},
+$p_t=l_t-\sum_b(N_t(b)-s_t(b))$.
+Since $\rho_t$ is a permutation of the residues, precisely $l_t$ of its
+values exceed $t$. Therefore
+\begin{equation}\label{eq:slot}
+p_t=-\sum_b F_t(b),\qquad
+F_t(b)=N_t(b)-s_t(b)-\ind{\rho_t(b)>t}.
+\end{equation}
+
+We claim $F_t(b)\le |b|-2$ when $|b|\ge2$, and $F_t(b)\le0$ when
+$|b|\le1$. For $b=0$ this is immediate. For a unit vector,
+$N_t(b)\in\{0,1\}$; if it is $1$, then $\rho_t(b)<a_j$ and
+$s_t(b)=1$, proving the claim.
+
+Now write $k=|b|\ge2$, $s=s_t(b)$, $\rho=\rho_t(b)$, $N=N_t(b)$,
+and $l=l_t$. If $s=k$, then
+$Nm+\rho=A(b)+l\le k(m-1)+l<(k+1)m$, so $N\le k$ and $F_t(b)\le0$.
+If $s<k$, the $k-s$ noncarrying label occurrences are at most $\rho$,
+and the remaining $s$ are at most $m-1$. Hence
+\[
+Nm\le(k-s-1)\rho+s(m-1)+l
+\le(k-1)(m-1)+l<km.
+\]
+Thus $N\le k-1$. If $s\ge1$, or if $N\le k-2$, the claim follows.
+The remaining possibility is $s=0$ and $N=k-1$. In that case
+$(k-1)(m-\rho)\le l$. If $\rho\le t$, the left side is at least
+$(k-1)(m-t)>m-1-t=l$, a contradiction. Consequently $\rho>t$, and
+$F_t(b)=k-2$. Summing the claim in \eqref{eq:slot} proves the lemma.
+\end{proof}
+
+\begin{lemma}\label{lem:height}
+For every cyclic tile and target, $R_t\ge R_0(B)$.
+\end{lemma}
+\begin{proof}
+The labels are positive, so $N_t(z)\ge N_t(b)$ for $z\ge b$.
+It follows that $E_t(b)\ge\eta(b)$. Sum with weights $\mu(b)$.
+\end{proof}
+
+\begin{corollary}[Shape certificate]\label{cor:shape}
+Every numerical semigroup satisfies
+\begin{equation}\label{eq:shapebound}
+W(S)\ge\PC_r\ge R_0(B)-D(B).
+\end{equation}
+In particular, $R_0(B)\ge D(B)$ suffices for Wilf's conjecture, for
+every realization of the labelled tile and every genus.
+\end{corollary}
+
+The criterion is sufficient; no universal assertion $R_0(B)\ge D(B)$
+is made. The next section includes a cyclic tile where that inequality
+fails and the path certificate still succeeds.
+
+\section{The finite verification}
+
+\subsection{Finite candidate sets and exhaustive enumeration}
+
+For any nondegenerate downset of size $m$, every nonzero $b\in B$ obeys
+\begin{equation}\label{eq:candidates}
+|b|\le m-d,\qquad
+\prod_{j=1}^d(b_j+1)+\#\{j:b_j=0\}\le m.
+\end{equation}
+Indeed, a monotone path to $b$ contains $|b|+1$ cells and exactly one
+unit vector, so adjoining the other $d-1$ units gives the first bound.
+The box $[0,b]$ has the displayed product as its cardinality; the units
+in zero coordinates lie outside that box, giving the second bound.
+The origin is included separately. These inequalities give an explicit
+finite candidate set containing every possible tile.
+
+Both production programs enumerate strictly increasing label vectors
+with entries in $\{1,\ldots,m-1\}$ and with
+$\gcd(m,a_1,\ldots,a_d)=1$. For a unit
+$u\in(\Z/m\Z)^\times$, multiplying labels by $u$ preserves bijectivity.
+Sorting the resulting labels is a simultaneous coordinate permutation
+of the tile. One lexicographically least sorted label vector is chosen
+from each unit orbit. The orbit weight is the number of distinct sorted
+label vectors in that orbit, which may be smaller than $\varphi(m)$.
+The shape quantities $R_0$ and $D$ are invariant under coordinate
+permutation. These reductions therefore preserve all required shapes.
+
+The first enumerator, archived as \texttt{tiles\_enum.py}, constructs
+every cell whose box has injective residue labels. Such cells form a
+downset, and each has box volume at most $m$, so the construction is
+finite. Every cell of a cyclic tile must occur in this pool.
+The search assigns one cell to each residue. Choosing a candidate forces
+all cells in its box; a branch is rejected only when a residue would be
+assigned two different cells or an unassigned residue has no consistent
+candidate. It chooses the next residue deterministically with the fewest
+consistent candidates. For any fixed valid tile, its assigned cell is
+always available along the branch corresponding to that tile, so the
+search finds every tile. The deterministic branching and forced
+assignments also give a unique branch for each completed tile. Finally
+the nondegeneracy condition is imposed. The production calls have no
+tile cap or degree cutoff.
+
+The second enumerator uses \eqref{eq:candidates}, orders candidate cells
+by degree and then lexicographically, and extends the forced origin and
+units by an increasing sequence. A cell may be added only when its
+immediate parents have already been selected and its residue is unused.
+Every downset has exactly one such increasing sequence. A branch is
+pruned when an unused residue has no later candidate, or every later
+candidate of that residue has an already excluded parent. Both tests
+are necessary conditions for an extension and cannot discard a tile.
+This search shares no exact-cover enumeration code with the first one.
+
+\subsection{Completed census rows}
+
+Table~\ref{tab:census} contains exactly the cases needed beyond the
+established theorems. The weighted count is the sum of label-orbit
+weights, not the number of representatives actually visited. In fresh
+full runs, the two programs give identical weighted counts, minima of
+$R_0-D$ and exception counts on every row; the representative counts
+are from the first program, as the second does not report them.
+The representative count includes every tile at the chosen label
+vectors; it does not take a further quotient by their stabilizers.
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabular}{rrrrrr}
+\toprule
+$m$ & $d=e-1$ & Representatives & Weighted tiles & $\min(R_0-D)$ & Exceptions\\
+\midrule
+20&3&1,391&10,244&4&0\\
+20&4&25,619&187,000&12&0\\
+20&5&328,112&2,492,114&14&0\\
+21&3&1,383&15,846&$-2$&1\\
+21&4&30,133&331,341&16&0\\
+21&5&444,166&5,195,104&11&0\\
+22&3&1,763&17,265&0&0\\
+22&4&41,611&397,790&14&0\\
+22&5&664,133&6,574,135&12&0\\
+22&6&8,169,530&81,030,042&19&0\\
+23&3&1,487&32,714&1&0\\
+23&4&37,699&795,993&16&0\\
+23&5&670,311&14,746,842&18&0\\
+23&6&9,460,136&206,425,967&16&0\\
+\midrule
+\multicolumn{2}{l}{Total}&19,877,474&318,252,397&&1\\
+\bottomrule
+\end{tabular}
+\caption{The fourteen required census rows. Exceptions count
+representatives with $R_0<D$.}\label{tab:census}
+\end{table}
+
+Write $H=\sum_b\pos{|\operatorname{supp}(b)|-1}$. An earlier version of
+the first census evaluated only $R_0-\min(H,D)$. Nonnegative values of that margin alone do not establish the criterion
+used here. Both programs now record $R_0-D$ directly; these minima and
+the direct treatment below supply precisely the evidence needed for
+Corollary~\ref{cor:shape}. The present proof does not require a bound
+involving $H$.
+
+\subsection{The exception at multiplicity 21}
+
+Both programs report the same sole exceptional representative in
+Table~\ref{tab:census}. It has $a=(1,4,5)$ and
+\begin{equation}\label{eq:exception}
+\begin{split}
+B={}&\{(0,j,k):j,k\ge0,\ j+k\le4\}\\
+ &\cup\{(i,0,k):1\le i\le3,\ k\ge0,\ i+k\le3\}.
+\end{split}
+\end{equation}
+It has $|B|=21$, $R_0(B)=15$ and $D(B)=17$. The eight maximal cells are
+\[
+\{(0,j,4-j):0\le j\le4\}\cup\{(i,0,3-i):1\le i\le3\}.
+\]
+For each of the twelve units $u\pmod{21}$, replace $a$ by
+$a^{(u)}=(u,4u,5u)\pmod{21}$, with residues in $\{1,\ldots,20\}$,
+and evaluate \eqref{eq:pc} at each maximal target
+$t=a^{(u)}\cdot z\pmod{21}$. The minima over the eight targets are
+\[
+\begin{array}{c|rrrrrrrrrrrr}
+u&1&2&4&5&8&10&11&13&16&17&19&20\\ \hline
+\min_t\PC_t&15&22&31&23&29&23&23&22&25&22&23&23.
+\end{array}
+\]
+Thus all $96$ certificates are nonnegative. Simultaneous coordinate
+permutation changes none of their values. Every genuine realization of
+this orbit has a maximal Ap\'ery target, so Theorem~\ref{thm:path}
+certifies it.
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+The semigroup $\N$ is immediate.
+The case $m\le19$ follows from \cite{BGOW,KS}. For $20\le m\le23$,
+apply the established results when $e\le3$ or $3e\ge m$.
+In every remaining case Lemma~\ref{lem:normal} gives a tile included in
+Table~\ref{tab:census}. Except for \eqref{eq:exception}, it satisfies
+$R_0\ge D$, so Corollary~\ref{cor:shape} applies. The preceding
+calculation certifies the exceptional orbit. This exhausts all cases.
+\end{proof}
+
+\section{Reproducibility and scope}
+
+The computational supplement, supplied as ancillary files with the
+arXiv source submission, contains the two production algorithms, the
+outputs of their full reruns, the earlier archived row summaries and
+terminal logs, a SHA-256 manifest, and \texttt{verify.py}. Its default
+checks recompute the extrema saved in $99$ archived records, compare
+the fourteen required rows of the archived and rerun outputs, check
+that both reruns report the same single exceptional tile, evaluate the
+$96$ exceptional certificates, and verify the endpoint and path
+identities on eight retained genuine semigroups and fifty seeded
+examples. Its \texttt{-{}-smoke} option also performs fourteen fresh
+small enumerations through $m=9$, compares the complete tile sets of
+an exact-cover and a linear-extension search for each label vector,
+and tests the carry estimate at every target on those tiles.
+
+The independent program was compiled with GCC~13.3.0
+(\texttt{-O3 -std=gnu11}) and run under Ubuntu~24.04 in the Windows
+Subsystem for Linux; the exact-cover census was run with CPython~3.14.5
+under Windows~11. The supplement records the commands, source hashes,
+run times and outputs. All fourteen C runs recorded exit code zero.
+Python exit codes were not captured; each run produced its final summary
+record, written after enumeration, and left standard error empty.
+These reruns, rather than the archived
+logs, are the evidence for Table~\ref{tab:census}. The archived outputs
+agree with them on every row, but some were produced by source
+revisions not retained in the supplement.
+
+Two further checks share no code with the production programs.
+\texttt{shape\_first\_d3.py} enumerates every downset of size $m$ in
+$\N^3$ containing the units, counts its valid labellings directly, and
+reproduces the four rows with $d=3$, including the exception and its
+certificates. \texttt{genus\_sweep.py} checks
+Lemmas~\ref{lem:normal}, \ref{lem:summation}, \ref{lem:carry}
+and~\ref{lem:height}, Proposition~\ref{prop:identity} and
+Theorem~\ref{thm:path} on all $258{,}582$ numerical semigroups of genus
+at most $22$, testing the carry and height bounds at every target.
+Fourteen of these semigroups have $R_0(B)<D(B)$; the path certificate
+covers each of them. Instructions for reproducing the computations and
+checking the saved evidence are included in the supplement.
+
+The theorem is uniform in genus and generator height. The certificate
+itself applies in every dimension, but the finite census establishes
+its required sign only in the stated range. Extending that range or
+proving positivity for general cyclic tiles requires further work.
+
+\paragraph{Computer and AI assistance.}
+This is a computer-assisted proof: its finite verification uses the
+exhaustive enumerations described above. AI tools also assisted with
+mathematical exploration, proof development, code preparation and
+manuscript drafting and review. The retained sources and outputs make
+the computational evidence available for inspection and reproduction.
+The author is responsible for the mathematical claims and the submitted
+manuscript.
+
+\begin{thebibliography}{9}
+\bibitem{Wilf}
+H. S. Wilf, A circle-of-lights algorithm for the ``money-changing
+problem'', \emph{Amer. Math. Monthly} \textbf{85} (1978), 562--565.
+
+\bibitem{FGH}
+R. Fr\"oberg, C. Gottlieb and R. H\"aggkvist, On numerical semigroups,
+\emph{Semigroup Forum} \textbf{35} (1987), 63--83.
+
+\bibitem{DM}
+D. E. Dobbs and G. L. Matthews, On a question of Wilf concerning
+numerical semigroups, in: \emph{Focus on Commutative Rings Research},
+Nova Sci. Publ., New York, 2006, 193--202.
+
+\bibitem{BGOW}
+W. Bruns, P. A. Garc\'ia-S\'anchez, C. O'Neill and D. Wilburne,
+Wilf's conjecture in fixed multiplicity,
+\emph{Internat. J. Algebra Comput.} \textbf{30} (2020), 861--882.
+\href{https://arxiv.org/abs/1903.04342}{arXiv:1903.04342}.
+
+\bibitem{KS}
+J. Kliem and C. Stump, A new face iterator for polyhedra and for more
+general finite locally branched lattices,
+\emph{Discrete Comput. Geom.} \textbf{67} (2022), 1147--1173.
+\href{https://arxiv.org/abs/1905.01945}{arXiv:1905.01945}.
+
+\bibitem{EliahouGraph}
+S. Eliahou, A graph-theoretic approach to Wilf's conjecture,
+\emph{Electron. J. Combin.} \textbf{27} (2020), Paper No. 2.15.
+\href{https://arxiv.org/abs/1909.03699}{arXiv:1909.03699}.
+
+\bibitem{EliahouDivsets}
+S. Eliahou, Divsets, numerical semigroups and Wilf's conjecture,
+\emph{Comm. Algebra} \textbf{53} (2025), 2025--2048.
+
+\bibitem{DEF}
+M. Delgado, S. Eliahou and J. Fromentin, A verification of Wilf's
+conjecture up to genus 100, \emph{J. Algebra} \textbf{664} (2025), 150--163.
+
+\bibitem{Marashdeh}
+M. F. Marashdeh, An upper bound for the type of a numerical semigroup,
+and a reduction of Wilf's conjecture, preprint, August 2026.
+\href{https://arxiv.org/abs/2608.12531}{arXiv:2608.12531}.
+\end{thebibliography}
+\end{document}

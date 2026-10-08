@@ -1,0 +1,568 @@
+{
+  "snapshot_date": "2026-10-07",
+  "scope": "Public GitHub repository snapshot; production source/run evidence and the 2026-10-05 arXiv source archive are unchanged.",
+  "notes_source": "WILF_GLOBAL_ATTACK.md",
+  "notes_sha256": "81bd03d0c8395b3d178e33b6fb1a34c8938196261aa974aea77c075b078f26f5",
+  "files": [
+    {
+      "path": "manuscript.tex",
+      "sha256": "69643db637abe3071a0cd41cb0c23a616bf1ff2b847355a4ee2bad7524755f46",
+      "changes": "Final arXiv preparation: Jason Collier author details; removed draft placeholders; explicit ancillary-file availability, Python exit-code limitation and computer/AI assistance disclosure."
+    },
+    {
+      "path": "README.md",
+      "sha256": "23e2e61479d45845a8ed37d2b358185a527f5f4b1773492556ad2e19ced1af3a",
+      "changes": "Final arXiv package layout, author/disclosure, original runner path limitation, and compilation/submission status. Repository copy: updated distribution links/status on 2026-10-07."
+    },
+    {
+      "path": "AUDIT.md",
+      "sha256": "0820535c9ce300d84b3cd1e4d47a640ad26f56c8e91f321d7b2f433ec129ff28",
+      "changes": "Final proof/evidence audit, additional verifier checks, genus-10 replay, compilation/PDF review, author/disclosure and arXiv release status. Repository copy: updated distribution links/status on 2026-10-07."
+    },
+    {
+      "path": "verify.py",
+      "sha256": "c514d29f7a8d0da8cfe5a85c7d5c8acc911cb48b4bf349120d21114164e6d36d",
+      "changes": "Final validation also checks all C exit records and witness counts, Python row identities and empty stderr, and all four saved shape-first recounts and exceptional certificates."
+    },
+    {
+      "path": "census.py",
+      "sha256": "19b76024568234f6c1abcf715eda7b3ab1d4f2b6b68b6e6b664c427a8c0e114d",
+      "source": "front_P2/census_lean.py",
+      "source_sha256": "6d02ac3284caf9b652a375c5095ed946e9916476f7b2992828c50c8570726344",
+      "changes": "Removed absolute imports; output directory from command argument; added explicit R0-D statistics."
+    },
+    {
+      "path": "data/orb_d3.log",
+      "sha256": "f5dd964bf6ac49e0905bcb4a66ae3ed6c1e7fc68bfbd2e2ad2cc996a0097a57a",
+      "source": "front_Q2/orb_d3.log",
+      "source_sha256": "f5dd964bf6ac49e0905bcb4a66ae3ed6c1e7fc68bfbd2e2ad2cc996a0097a57a",
+      "changes": "Unmodified byte-for-byte copy."
+    },
+    {
+      "path": "data/orb_d4.log",
+      "sha256": "eb3a256901f3ae6dd34e0aa752fe8ca27aea96451c4ba306fbdf00e49e08d0e5",
+      "source": "front_Q2/orb_d4.log",
+      "source_sha256": "eb3a256901f3ae6dd34e0aa752fe8ca27aea96451c4ba306fbdf00e49e08d0e5",
+      "changes": "Unmodified byte-for-byte copy."
+    },
+    {
+      "path": "data/p2u_d3_hi.log",
+      "sha256": "ff29599abc945441c40c21730e031a2b81fbb78f36e14e89c5f109c520066dec",
+      "source": "front_Q2/p2u_d3_hi.log",
+      "source_sha256": "ff29599abc945441c40c21730e031a2b81fbb78f36e14e89c5f109c520066dec",
+      "changes": "Unmodified byte-for-byte copy."
+    },
+    {
+      "path": "data/p2u_d5.log",
+      "sha256": "7f84f204fec3b055aac0303fd108668e7d6ccfa829d8b92735e017b4d1f2ea0f",
+      "source": "front_Q2/p2u_d5.log",
+      "source_sha256": "7f84f204fec3b055aac0303fd108668e7d6ccfa829d8b92735e017b4d1f2ea0f",
+      "changes": "Unmodified byte-for-byte copy."
+    },
+    {
+      "path": "data/p2u_d5b.log",
+      "sha256": "cffe5fefa8b5bfa242ababd684b27c12fd0b50c45f931321b113f8a1556704ea",
+      "source": "front_Q2/p2u_d5b.log",
+      "source_sha256": "cffe5fefa8b5bfa242ababd684b27c12fd0b50c45f931321b113f8a1556704ea",
+      "changes": "Unmodified byte-for-byte copy."
+    },
+    {
+      "path": "data/p2u_d6.log",
+      "sha256": "7ac5bf73cddc015c2fec641193b264977d20552f3a5611f5db5a00f1a84b6fd2",
+      "source": "front_Q2/p2u_d6.log",
+      "source_sha256": "7ac5bf73cddc015c2fec641193b264977d20552f3a5611f5db5a00f1a84b6fd2",
+      "changes": "Unmodified byte-for-byte copy."
+    },
+    {
+      "path": "data/summary.jsonl",
+      "sha256": "2558b92f33aedb3222aa3b29e854b90e41c43490ab50f9c20e6259523d3d2433",
+      "source": "front_P2/summary.jsonl",
+      "source_sha256": "2558b92f33aedb3222aa3b29e854b90e41c43490ab50f9c20e6259523d3d2433",
+      "changes": "Unmodified byte-for-byte copy."
+    },
+    {
+      "path": "data/summary_lean.jsonl",
+      "sha256": "e30cf3e17a764ad5a5bc999875f65685a9661282ec509247b5c5413e67b0ea4d",
+      "source": "front_P2/summary_lean.jsonl",
+      "source_sha256": "e30cf3e17a764ad5a5bc999875f65685a9661282ec509247b5c5413e67b0ea4d",
+      "changes": "Unmodified byte-for-byte copy."
+    },
+    {
+      "path": "independent.c",
+      "sha256": "9bc7fe8064fda510c6a14a5df677f1eaca4e5696cc53ec5e2ab482ea646d3785",
+      "source": "front_Q2/indep_p2u.c",
+      "source_sha256": "9bc7fe8064fda510c6a14a5df677f1eaca4e5696cc53ec5e2ab482ea646d3785",
+      "changes": "Unmodified byte-for-byte copy."
+    },
+    {
+      "path": "independent_original.c",
+      "sha256": "2d5c3b22ba14a6d865bb7f874e380fa34eeddecb2c886cdb2321561a23e9801c",
+      "source": "front_Q2/indep_orb.c",
+      "source_sha256": "2d5c3b22ba14a6d865bb7f874e380fa34eeddecb2c886cdb2321561a23e9801c",
+      "changes": "Unmodified byte-for-byte copy."
+    },
+    {
+      "path": "tiles_enum.py",
+      "sha256": "ca8db9f998c21f6ab7b509511316297e6f8b92f312766f026461f7bada5a16b2",
+      "source": "front_N/tiles_enum.py",
+      "source_sha256": "61f07c0b426325f4fac44fd389e324b4e22f47a8dde369cb62f5e93922600317",
+      "changes": "Removed absolute core import and inlined up(); enumeration unchanged."
+    },
+    {
+      "path": "manuscript.pdf",
+      "sha256": "6de966177d0ec200e318b238c047a48fee88046787cbf4a1895ecd608dcf2ffd",
+      "changes": "Rebuilt in place from the final manuscript.tex with Tectonic 0.17.0, exit code zero; eight pages inspected; no TeX warnings or undefined references."
+    },
+    {
+      "path": "shape_first_d3.py",
+      "sha256": "ccbdd3ffeb40a032b49417ed3ec239e9dba8de4089751276ff5ad04ff2330bce"
+    },
+    {
+      "path": "genus_sweep.py",
+      "sha256": "85439663c4f0c21add7ffee173d6842d7a3bb88cac081dd9a1c047544a8cc7fc"
+    },
+    {
+      "path": "rerun_2026-10-05/RUNS.md",
+      "sha256": "1b387151f55e1d91373f502095f09cfbd92478cd56b3129d4d1c7c3992d7ba06"
+    },
+    {
+      "path": "rerun_2026-10-05/c/d3_m20.done",
+      "sha256": "80b4da9b7d18496680481c73d2fe3332c7aebe609078a4cc5124ca5f09b085a4"
+    },
+    {
+      "path": "rerun_2026-10-05/c/d3_m20.log",
+      "sha256": "23417b7a8617ad6fa2ee51c6e4f62119640ec492457aafd5389ec809b9684a2a"
+    },
+    {
+      "path": "rerun_2026-10-05/c/d3_m21.done",
+      "sha256": "80b4da9b7d18496680481c73d2fe3332c7aebe609078a4cc5124ca5f09b085a4"
+    },
+    {
+      "path": "rerun_2026-10-05/c/d3_m21.log",
+      "sha256": "3e4426187653e9a294051d137701b4107e484c80dad42d2af9d2a9915934e43a"
+    },
+    {
+      "path": "rerun_2026-10-05/c/d3_m22.done",
+      "sha256": "80b4da9b7d18496680481c73d2fe3332c7aebe609078a4cc5124ca5f09b085a4"
+    },
+    {
+      "path": "rerun_2026-10-05/c/d3_m22.log",
+      "sha256": "ce6551e1757bf92c2b05749c58ae0d04ec08674eb718e54d34897cc4920fe0c0"
+    },
+    {
+      "path": "rerun_2026-10-05/c/d3_m23.done",
+      "sha256": "80b4da9b7d18496680481c73d2fe3332c7aebe609078a4cc5124ca5f09b085a4"
+    },
+    {
+      "path": "rerun_2026-10-05/c/d3_m23.log",
+      "sha256": "5c7324fb1ea28c400ddd5fa5d48018c7ecd361c2ab8388b4af234e206007e0eb"
+    },
+    {
+      "path": "rerun_2026-10-05/c/d4_m20.done",
+      "sha256": "d85357c4b781186e0b515a315473b0070928849434ec491d9570f7a75c6cc2fb"
+    },
+    {
+      "path": "rerun_2026-10-05/c/d4_m20.log",
+      "sha256": "598376a76aae274e42ad73bd694e02eb51946bdb7668ab3a5fa2196664de6040"
+    },
+    {
+      "path": "rerun_2026-10-05/c/d4_m21.done",
+      "sha256": "6d11f8d6b5b49c73b003a2477c235951615aa0df527290f4a3a150063dd6bc85"
+    },
+    {
+      "path": "rerun_2026-10-05/c/d4_m21.log",
+      "sha256": "d5114e61004134556d4d1377d7921b583e7a1be9a79d6d63d522e7ab769b7f1c"
+    },
+    {
+      "path": "rerun_2026-10-05/c/d4_m22.done",
+      "sha256": "98f419241b4fe4a695ee9eb394e6903213161aea7e9e6e899834f169cb8b6de6"
+    },
+    {
+      "path": "rerun_2026-10-05/c/d4_m22.log",
+      "sha256": "724e97acafe40091ca42c74a8411f7292dd2add8207d9f3794c655b09335c57b"
+    },
+    {
+      "path": "rerun_2026-10-05/c/d4_m23.done",
+      "sha256": "592e10275295e277bb4004ae407b3fed1c84f63bde80beb2d691618efcf974a6"
+    },
+    {
+      "path": "rerun_2026-10-05/c/d4_m23.log",
+      "sha256": "48a2e017b78071767e70b1e7bc7d2f72243c6a03415e31d4c1e879f27b44034a"
+    },
+    {
+      "path": "rerun_2026-10-05/c/d5_m20.done",
+      "sha256": "45aff9e3444ca12d58871b420511fea502d6dc7d696cfee1f29c04a8ecb4a600"
+    },
+    {
+      "path": "rerun_2026-10-05/c/d5_m20.log",
+      "sha256": "ea1c9189024e1c826978748aa19c4082716c934083b2e55a6d911167c0ed8a1d"
+    },
+    {
+      "path": "rerun_2026-10-05/c/d5_m21.done",
+      "sha256": "ad796ad826198a55ad9211525f8d5a467795c9a7a343d9ee19516819de7cb5af"
+    },
+    {
+      "path": "rerun_2026-10-05/c/d5_m21.log",
+      "sha256": "c1516d26cd94dccc86861b14c635dc63a0d04a3ad95945dc54c018179a2e9090"
+    },
+    {
+      "path": "rerun_2026-10-05/c/d5_m22.done",
+      "sha256": "23e8246666a55768229674a8b6e345bf3a813eaaa0360909b4cd386dbd5c7f04"
+    },
+    {
+      "path": "rerun_2026-10-05/c/d5_m22.log",
+      "sha256": "421427b8f0831005542753a6ae525a2b846182b71e7255e542fe1bee2c0aabd5"
+    },
+    {
+      "path": "rerun_2026-10-05/c/d5_m23.done",
+      "sha256": "2c17fdc9b16c9e9ef6452b4751f9307442865a9423a5e7d20ba210edbc25f888"
+    },
+    {
+      "path": "rerun_2026-10-05/c/d5_m23.log",
+      "sha256": "51216a32aa0bf5db1703f635f7dbc16f85b40985521bf8805c0a4be8869e6acf"
+    },
+    {
+      "path": "rerun_2026-10-05/c/d6_m22.done",
+      "sha256": "499465cb9f12734e1c7c8043bd2434d8176eed6a61c6e9f15a13adcd5475d83c"
+    },
+    {
+      "path": "rerun_2026-10-05/c/d6_m22.log",
+      "sha256": "bc30966af1ecb74be089037007c0f141efe59194321166d9a702759880b6d6ee"
+    },
+    {
+      "path": "rerun_2026-10-05/c/d6_m23.done",
+      "sha256": "2d110ad616f50055b30d8e342b14126b38c79246c70a12415f7dbf685fd5fcb2"
+    },
+    {
+      "path": "rerun_2026-10-05/c/d6_m23.log",
+      "sha256": "181963d4a9ff274063c912434ba73fcb9d54b3f88fc5f3913733ee1ce8298915"
+    },
+    {
+      "path": "rerun_2026-10-05/c/env.txt",
+      "sha256": "90a369019f32f5c560b2ede30780fd3a05552cf366b2398f36ee5febff3c5cc4"
+    },
+    {
+      "path": "rerun_2026-10-05/c/run.sh",
+      "sha256": "5e3d22d3923694a0f471bec708a4e0850f91c3a8041e5ec8852e913af0242e99"
+    },
+    {
+      "path": "rerun_2026-10-05/independent_checks/genus_sweep_g22.log",
+      "sha256": "eeefdb1cf790798b4b6186181caf56766e7ee13a363fc654e974a2b6e2032663"
+    },
+    {
+      "path": "rerun_2026-10-05/independent_checks/shape_first_d3_m20.json",
+      "sha256": "52f9e9aa52e5890d45c40d3005c4ed330b3d3ff130ca72f28a426b6f13f76530"
+    },
+    {
+      "path": "rerun_2026-10-05/independent_checks/shape_first_d3_m21.json",
+      "sha256": "04e746a747f4186c664cec24a30da8363023fd81d5b12bd11b554e2d44c5bfce"
+    },
+    {
+      "path": "rerun_2026-10-05/independent_checks/shape_first_d3_m22.json",
+      "sha256": "67a62cb9faa7b78370617abba4f13b1e7c38b96a13c87a77bd0ebbacd58a39f2"
+    },
+    {
+      "path": "rerun_2026-10-05/independent_checks/shape_first_d3_m23.json",
+      "sha256": "6edb03d8b184ddf42ba6bb4e63db2696ca31b85a8f0c1b75a5486517ab8e99c2"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d3_m20/RD_TILES.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d3_m20/RESIDUAL_TILES_raw.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d3_m20/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d3_m20/stdout.txt",
+      "sha256": "1a78d45de3d4135b1b7a03cf53028cd397d05ce6f5974c7ec06b2dd4914b2606"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d3_m20/summary.jsonl",
+      "sha256": "56745a6a414f5959eee02a8cf5da4b99954d1839fb84c923c081904513fe0031"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d3_m21/RD_TILES.jsonl",
+      "sha256": "1173fffd78f9ba737f8220918b3dae48614ae2b465b8ed8b545252d6c8949ad1"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d3_m21/RESIDUAL_TILES_raw.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d3_m21/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d3_m21/stdout.txt",
+      "sha256": "247e180506d07a29dc815ffafa080786b5db42bb90d537f20f78737d63c3b33b"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d3_m21/summary.jsonl",
+      "sha256": "371f4e08b4da3d428ef8225214146aabfdfdee284941ff0ace522823e3f3f80d"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d3_m22/RD_TILES.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d3_m22/RESIDUAL_TILES_raw.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d3_m22/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d3_m22/stdout.txt",
+      "sha256": "bcfd6fc6a438ca709cbe59ec6ea67f66aa3000f915798543a4dbea9fa46c137b"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d3_m22/summary.jsonl",
+      "sha256": "b600878aa03c36cf313fc3ddc3b2893615fd416b8f83dfeadc0011249af09fc9"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d3_m23/RD_TILES.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d3_m23/RESIDUAL_TILES_raw.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d3_m23/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d3_m23/stdout.txt",
+      "sha256": "073db6794f435cf7ada42f77cb5f3548fe9f1d35bad8c937a4e3f1c556c425cd"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d3_m23/summary.jsonl",
+      "sha256": "6369535b12fdc334be47d1c27657dba16373b73eae7ea1dad4b5ba244c6c8122"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d4_m20/RD_TILES.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d4_m20/RESIDUAL_TILES_raw.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d4_m20/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d4_m20/stdout.txt",
+      "sha256": "9a122f1c58d8bb3ec2a27a94321e038e9d9a4450b642e93ec6fa8c44b0bb87d5"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d4_m20/summary.jsonl",
+      "sha256": "0a5cdb9309ac5b1b274d2afefd60199d00692eabc7a0dae03eb4c89b0d58396a"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d4_m21/RD_TILES.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d4_m21/RESIDUAL_TILES_raw.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d4_m21/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d4_m21/stdout.txt",
+      "sha256": "bd7465ee69a1183c9e07a3deded2793c7a2ec4346748002b77d1e422386013e0"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d4_m21/summary.jsonl",
+      "sha256": "01ad1492e9a534bf453663ef35c026c7ade3921315f3f4b31de172387e793d94"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d4_m22/RD_TILES.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d4_m22/RESIDUAL_TILES_raw.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d4_m22/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d4_m22/stdout.txt",
+      "sha256": "70bef769a954d96cfeae96294d641c69d103f35f93c180fcd2fe95677bfda803"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d4_m22/summary.jsonl",
+      "sha256": "f78484fff113e739d2face8c9ad11e1c15ec10ea4554c802663bdf89370ee6f1"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d4_m23/RD_TILES.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d4_m23/RESIDUAL_TILES_raw.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d4_m23/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d4_m23/stdout.txt",
+      "sha256": "63695dd000042aadbde88701065060b7f33a3b55b259d2104e6faf3c2b30171a"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d4_m23/summary.jsonl",
+      "sha256": "cb35e8a562ba7b4957acb507d327d80fa7f951a8e33db50d37aedce82d0a95f3"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d5_m20/RD_TILES.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d5_m20/RESIDUAL_TILES_raw.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d5_m20/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d5_m20/stdout.txt",
+      "sha256": "35dacfb060245feb30e6096a2248ba51ed4369266210d65af71168749e6277ed"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d5_m20/summary.jsonl",
+      "sha256": "59d0b621db5bfc87c68140d1ca7b1c2c66733e4cf39b7505ec2050854b8e5db9"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d5_m21/RD_TILES.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d5_m21/RESIDUAL_TILES_raw.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d5_m21/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d5_m21/stdout.txt",
+      "sha256": "ea943555c940b25a9c227389084cfe8b5005a8ea7afa4fe0c873eeb914969a91"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d5_m21/summary.jsonl",
+      "sha256": "06fee70a79ed2ba3e8b97505e34e6d4095697d0ea10f8de8aecbbfc29bd481a0"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d5_m22/RD_TILES.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d5_m22/RESIDUAL_TILES_raw.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d5_m22/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d5_m22/stdout.txt",
+      "sha256": "515d874c142d98b587561e4e8e1fc8bbdfd253270fb2b3686bdb793ebe4c71ea"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d5_m22/summary.jsonl",
+      "sha256": "ab497dd47c75d3008e5628e66d6961511a95a4603d5e8de2dd3b55e70af758c3"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d5_m23/RD_TILES.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d5_m23/RESIDUAL_TILES_raw.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d5_m23/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d5_m23/stdout.txt",
+      "sha256": "1579534c645afaa1506697e7250bbcbc8817d86a5374814848a6913fd574afb3"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d5_m23/summary.jsonl",
+      "sha256": "16c3bc601ced618e55da505a9e77d8571567507e0a172a0c34e573fbfe1ec165"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d6_m22/RD_TILES.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d6_m22/RESIDUAL_TILES_raw.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d6_m22/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d6_m22/stdout.txt",
+      "sha256": "9da3f2d01200f2c21a0d86bbf0dc9eec9bbc65b7d74e5ef00f8dda5111be7b7b"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d6_m22/summary.jsonl",
+      "sha256": "29d323fa68e840515711b98614668239fd46556b9e993fb14743b41be6c7a19a"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d6_m23/RD_TILES.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d6_m23/RESIDUAL_TILES_raw.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d6_m23/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d6_m23/stdout.txt",
+      "sha256": "f4aeba6d37d15132c488bbafd946a7d47c471885e889eab310832b410b7058f9"
+    },
+    {
+      "path": "rerun_2026-10-05/python/d6_m23/summary.jsonl",
+      "sha256": "da6587c265f50d6b9336f8c5ce32c7efa38f9373901e9372ecae5fe85fe66646"
+    },
+    {
+      "path": "rerun_2026-10-05/python/env.txt",
+      "sha256": "0b5d4eb821c36bd083a42b3051562d11e2a0c3edc43e902b78209808e8ff8dbc"
+    },
+    {
+      "path": "ARXIV_SUBMISSION.md",
+      "sha256": "7cff09faff77ce28253f99766674c7e21e503c4b4a05a624bd57077647d8d9f3",
+      "changes": "Local upload instructions and metadata; excluded from the arXiv source archive. Repository copy: updated distribution links/status on 2026-10-07."
+    },
+    {
+      "path": "wilf_m23_arxiv_source.zip",
+      "sha256": "be38f3500873761d92e060fdc05236ef2c3635265e3bcfb08c1528b7bb9be5bb",
+      "changes": "Verified arXiv upload archive/checksum copied without modification."
+    },
+    {
+      "path": "wilf_m23_arxiv_source.sha256",
+      "sha256": "f5f5314d6cc95999873395741b91e54eda823c24186b360d3c83cbaf49cc6b15",
+      "changes": "Verified arXiv upload archive/checksum copied without modification."
+    }
+  ]
+}

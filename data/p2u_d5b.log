@@ -1,0 +1,3 @@
+d=5 m=21 tiles=5195104 negative_margin=0 min_margin=11  R0<D(needs 139)=0 min(R0-D)=11  U<min(H,D)[reps]=0 min(U-min(H,D))=10  U<H[reps]=0 min(U-H)=3
+d=5 m=22 tiles=6574135 negative_margin=0 min_margin=12  R0<D(needs 139)=0 min(R0-D)=12  U<min(H,D)[reps]=0 min(U-min(H,D))=11  U<H[reps]=0 min(U-H)=5
+d=5 m=23 tiles=14746842 negative_margin=0 min_margin=18  R0<D(needs 139)=0 min(R0-D)=18  U<min(H,D)[reps]=0 min(U-min(H,D))=13  U<H[reps]=0 min(U-H)=8

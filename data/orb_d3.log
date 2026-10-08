@@ -1,0 +1,16 @@
+d=3 m=15 tiles=3236 negative_margin=0 min_margin=5  R0<D(needs 139)=0 min(R0-D)=5
+d=3 m=16 tiles=4068 negative_margin=0 min_margin=2  R0<D(needs 139)=0 min(R0-D)=1
+d=3 m=17 tiles=8016 negative_margin=0 min_margin=6  R0<D(needs 139)=0 min(R0-D)=3
+d=3 m=18 tiles=5772 negative_margin=0 min_margin=7  R0<D(needs 139)=0 min(R0-D)=4
+d=3 m=19 tiles=13578 negative_margin=0 min_margin=5  R0<D(needs 139)=0 min(R0-D)=3
+d=3 m=20 tiles=10244 negative_margin=0 min_margin=7  R0<D(needs 139)=0 min(R0-D)=4
+d=3 m=21 tiles=15846 negative_margin=0 min_margin=6  R0<D(needs 139)=1 min(R0-D)=-2
+d=3 m=22 tiles=17265 negative_margin=0 min_margin=9  R0<D(needs 139)=0 min(R0-D)=0
+d=3 m=23 tiles=32714 negative_margin=0 min_margin=8  R0<D(needs 139)=0 min(R0-D)=1
+d=3 m=24 tiles=20624 negative_margin=0 min_margin=12  R0<D(needs 139)=0 min(R0-D)=1
+d=3 m=25 tiles=42620 negative_margin=0 min_margin=8  R0<D(needs 139)=4 min(R0-D)=-5
+d=3 m=26 tiles=37000 negative_margin=0 min_margin=13  R0<D(needs 139)=1 min(R0-D)=-3
+d=3 m=27 tiles=52902 negative_margin=0 min_margin=10  R0<D(needs 139)=1 min(R0-D)=-2
+d=3 m=28 tiles=47316 negative_margin=0 min_margin=13  R0<D(needs 139)=1 min(R0-D)=-2
+d=3 m=29 tiles=92792 negative_margin=0 min_margin=17  R0<D(needs 139)=1 min(R0-D)=-3
+d=3 m=30 tiles=50436 negative_margin=0 min_margin=18  R0<D(needs 139)=15 min(R0-D)=-4

@@ -1,0 +1,1 @@
+d=3 m=21 orbits=99 tiles(all a)=15846 [rep 1383] shapes=0 residual=0 minmargin=6 n<=5=0 1.1s

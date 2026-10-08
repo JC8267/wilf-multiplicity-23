@@ -1,0 +1,1 @@
+d=5 m=20 orbits=1519 tiles(all a)=2492114 [rep 328112] shapes=0 residual=0 minmargin=14 n<=5=0 827.9s

@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+/manuscript.aux
+/manuscript.log
+/manuscript.out
+/independent
+/independent.exe
